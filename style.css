@@ -2,7 +2,6 @@ body {
   background-color: #8730e5;
 }
 
-
 h1, h2 {
   font-size: 100px;
   float: none;
@@ -10,34 +9,38 @@ h1, h2 {
   text-align: center;
 }
 
-p{
-  font-size:45px;
-  float:none;
-  color:white;
+p {
+  font-size: 45px;
+  float: none;
+  color: white;
   text-align: center;
 }
 
-.column1 {
-  float:left;
-  width: 33%;
-  padding-left:0.34%;
+a {
+    color: white;
+    background-color: transparent;
+    text-decoration: none;
+}
 
+
+
+.column1 {
+  float: left;
+  width: 33%;
+  padding-left: 0.34%;
 }
 
 .column2 {
-  float:left;
+  float: left;
   width: 33%;
-  padding-left:0.33%;
-
-
+  padding-left: 0.33%;
 }
 
 .column3 {
-  float:left;
+  float: left;
   width: 33%;
-  padding-left:0.33%;
+  padding-left: 0.33%;
 }
-
 
 .row:after {
   content: "";
@@ -48,39 +51,84 @@ p{
 .ntignew {
   border-radius: 25%;
   float: left;
-  width:100%;
-      height: 21vw;
-      margin-bottom:12%;s
-
+  width: 32vw;
+  height: 21vw;
+  margin-bottom: 12%;
 }
 
-
 .csh {
-  width: 100%;
+  width: 32vw;
   border-radius: 25%;
   text-align: center;
-  height: 21.5vw;
+  height: 21vw;
+  margin-bottom: 12%;
 }
 
 .msp {
-  width: 95%;
+  width: 32vw;
+  height: 21vw;
   border-radius: 25%;
   text-align: center;
+  margin-bottom: 12%;
 }
 
+.container {
+  position: relative;
+}
 
+.image {
+  opacity: 1;
+  display: block;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+
+.middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 10vw;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+  cursor: pointer;
+}
+
+.container:hover .image {
+  opacity: 0.3;
+}
+
+.container:hover .middle {
+  opacity: 1;
+}
+
+.text {
+  background-color: #4CAF50;
+  color: white;
+  font-size: 16px;
+  padding: 16px 32px;
+}
 
 @media only screen and (max-width: 650px) {
-  .column1,.column2,.column3 {
-    text-align:center;
-    width:95%;
-    max-width:100%;
+  .column1, .column2, .column3 {
+    text-align: center;
+    width: 100%;
   }
 
-  .ntignew, .csh{
-    height:100%;
+  .csh, .msp  {
+    height: 100%;
+    width:100%;
   }
 
+  .ntignew{
+    width:100%;
+    height:60vw;
+  }
+
+  .middle{
+    top:15%;
+  }
 
   h1 {
     font-size: 30px;
